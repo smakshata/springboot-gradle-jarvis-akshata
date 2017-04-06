@@ -14,4 +14,10 @@ public class ConfigController {
 	public @ResponseBody String getConfigValue(@RequestParam String name) {
 		return name + "=test";
 	}
+	
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public @ResponseBody String getConfigValue() {
+		return "empName=test";
+	}
+	
 }
