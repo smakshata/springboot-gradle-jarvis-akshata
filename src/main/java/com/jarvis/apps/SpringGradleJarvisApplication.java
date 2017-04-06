@@ -19,7 +19,6 @@ public class SpringGradleJarvisApplication extends SpringBootServletInitializer{
 	}
 
 	public static void main(String[] args) {
-		
 		ConfigurableApplicationContext appContext = SpringApplication.run(SpringGradleJarvisApplication.class, args);
 	}
 }
