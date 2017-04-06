@@ -6,10 +6,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
+
+@Api("/config")
 @RestController
 @RequestMapping("/config")
 public class ConfigController {
-	
+		
 	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public @ResponseBody String getConfigValue(@RequestParam String name) {
 		return name + "=test";
