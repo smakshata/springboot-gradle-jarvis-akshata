@@ -1,5 +1,6 @@
 package com.jarvis.apps;
 
+import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -30,9 +31,10 @@ public class SpringGradleJarvisApplicationTests {
 	    
 	    @Test
 	    public void testGetConfig() throws Exception {
-	        /*ResultActions result = this.mockMvc.perform(get("http://localhost:8888/jarvis/config/pathName"))
+	        ResultActions result = this.mockMvc.perform(get("/config/{name}", "path").contentType("application/json"))
 	                .andExpect(status().isOk());
-	        assert(result.andReturn().equals("pathName=test"));*/
+	        
+	        assertEquals(result.andReturn().getResponse().getContentAsString(),("path=test"));
 	                //.andExpect();
 	    }
 
