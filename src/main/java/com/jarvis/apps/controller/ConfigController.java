@@ -22,7 +22,7 @@ public class ConfigController {
 	
 	
 	   //http://ip:port/jarvis/config/list
-@RequestMapping(value = "/list", method = RequestMethod.GET)
+  @RequestMapping(value = "/list", method = RequestMethod.GET)
 	public @ResponseBody String getConfigList() {
 		return "[path=testvalue]"; 
 	}
