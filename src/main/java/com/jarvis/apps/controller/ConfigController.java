@@ -19,9 +19,9 @@ public class ConfigController {
 		return name + "=testvalue";
 	}
 	
-	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public @ResponseBody String getConfigList() {
 		return "[path=/test,file=abc.txt]";
-	}
+	}*/
 	
 }
