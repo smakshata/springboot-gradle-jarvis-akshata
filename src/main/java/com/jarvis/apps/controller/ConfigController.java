@@ -14,14 +14,17 @@ import io.swagger.annotations.Api;
 @RequestMapping("/config")
 public class ConfigController {
 		
+	   //http://ip:port/jarvis/config/path
 	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public @ResponseBody String getConfigValue(@PathVariable String name) {
 		return name + "=testvalue";
 	}
 	
-	/*@RequestMapping(value = "/list", method = RequestMethod.GET)
+	
+	   //http://ip:port/jarvis/config/list
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public @ResponseBody String getConfigList() {
-		return "[path=/test,file=abc.txt]";
-	}*/
+		return "[path=/testvalue]";
+	}
 	
 }
