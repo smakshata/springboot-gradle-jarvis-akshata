@@ -16,7 +16,7 @@ public class ConfigController {
 		
 	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public @ResponseBody String getConfigValue(@PathVariable String name) {
-		return name + "=test";
+		return name + "=testvalue";
 	}
 	
 	@RequestMapping(value = "/list", method = RequestMethod.GET)

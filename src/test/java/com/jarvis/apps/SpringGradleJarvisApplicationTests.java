@@ -29,12 +29,14 @@ public class SpringGradleJarvisApplicationTests {
 	        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
 	    }
 	    
+	    //http://ip:port/jarvis/config/path
+	    
 	    @Test
 	    public void testGetConfig() throws Exception {
 	        ResultActions result = this.mockMvc.perform(get("/config/{name}", "path").contentType("application/json"))
 	                .andExpect(status().isOk());
 	        
-	        assertEquals(result.andReturn().getResponse().getContentAsString(),("path=test"));
+	        assertEquals(result.andReturn().getResponse().getContentAsString(),("path=testvalue"));
 	                //.andExpect();
 	    }
 
