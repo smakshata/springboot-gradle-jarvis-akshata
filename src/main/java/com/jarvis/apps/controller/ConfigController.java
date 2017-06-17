@@ -17,7 +17,7 @@ public class ConfigController {
 	   //http://ip:port/jarvis/config/path
 	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public @ResponseBody String getConfigValue(@PathVariable String name) {
-		return "Your Config with : " + name + " has value 'testValue'";
+		return "Your Config with : " + name + " has value 'testValue'"; 
 	}
 	
 	
