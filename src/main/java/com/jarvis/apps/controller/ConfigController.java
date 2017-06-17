@@ -17,14 +17,24 @@ public class ConfigController {
 	   //http://ip:port/jarvis/config/path
 	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public @ResponseBody String getConfigValue(@PathVariable String name) {
-		return name + "=testvalue";
+		return "Your Config with : " + name + " has value 'testValue'";
 	}
 	
 	
 	   //http://ip:port/jarvis/config/list
   @RequestMapping(value = "/list", method = RequestMethod.GET)
 	public @ResponseBody String getConfigList() {
-		return "[path=testvalue]"; 
+		return "[Config values stored are: testvalue]"; 
+	}
+  
+  @RequestMapping(value = "/find/{name}", method = RequestMethod.GET)
+	public @ResponseBody String findConfig(@PathVariable String name) {
+		return "Config " + name + "found"; 
+	}
+  
+  @RequestMapping(value = "/delete/{name}", method = RequestMethod.DELETE)
+	public @ResponseBody String deleteConfig(@PathVariable String name) {
+		return "deleted config:"+name; 
 	}
 	
 }
