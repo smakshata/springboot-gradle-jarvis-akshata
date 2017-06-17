@@ -34,7 +34,7 @@ public class ConfigController {
   
   @RequestMapping(value = "/delete/{name}", method = RequestMethod.DELETE)
 	public @ResponseBody String deleteConfig(@PathVariable String name) {
-		return "deleted config:"+name; //delete api
+		return "deleted config:"+name; //delete api 
 	}
 	
 }
