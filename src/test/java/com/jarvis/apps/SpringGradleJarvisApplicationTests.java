@@ -35,8 +35,9 @@ public class SpringGradleJarvisApplicationTests {
 	    public void testGetConfig() throws Exception {
 	        ResultActions result = this.mockMvc.perform(get("/config/{name}", "path").contentType("application/json"))
 	                .andExpect(status().isOk());
-	        
-	        assertEquals(result.andReturn().getResponse().getContentAsString(),("path=testvalue"));
+	        String response = result.andReturn().getResponse().getContentAsString();
+	        //System.out.println(response);
+	        assertEquals("Your Config with : path has value 'testValue'",response);
 	                //.andExpect();
 	    }
 
