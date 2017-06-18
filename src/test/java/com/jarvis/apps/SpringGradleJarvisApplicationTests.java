@@ -30,7 +30,7 @@ public class SpringGradleJarvisApplicationTests {
 	    }
 	    
 	    //http://ip:port/jarvis/config/path
-	    
+	    //Junit mock test		
 	    @Test
 	    public void testGetConfig() throws Exception {
 	        ResultActions result = this.mockMvc.perform(get("/config/{name}", "path").contentType("application/json"))
