@@ -1,6 +1,7 @@
 package com.jarvis.apps.controller;
 
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,5 +37,10 @@ public class ConfigController {
 	public @ResponseBody String deleteConfig(@PathVariable String name) {
 		return "deleted config:"+name; //delete api 
 	}
+  
+  @RequestMapping(value = "/post", method = RequestMethod.POST)
+ 	public @ResponseBody String postConfig(@RequestBody String name) {
+ 		return "saved config:"+name; //delete api 
+ 	}
 	
 }
