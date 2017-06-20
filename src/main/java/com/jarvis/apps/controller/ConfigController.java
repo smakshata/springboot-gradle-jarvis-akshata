@@ -33,10 +33,10 @@ public class ConfigController {
 		return "Config " + name + "found"; 
 	}
   
-  @RequestMapping(value = "/delete/{name}", method = RequestMethod.DELETE)
+/*  @RequestMapping(value = "/delete/{name}", method = RequestMethod.DELETE)
 	public @ResponseBody String deleteConfig(@PathVariable String name) {
 		return "deleted config:"+name; //delete api 
-	}
+	}*/
   
   @RequestMapping(value = "/post", method = RequestMethod.POST)
  	public @ResponseBody String postConfig(@RequestBody String name) {
