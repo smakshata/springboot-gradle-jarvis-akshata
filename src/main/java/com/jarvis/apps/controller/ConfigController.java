@@ -42,5 +42,5 @@ public class ConfigController {
  	public @ResponseBody String postConfig(@RequestBody String name) {
  		return "saved config:"+name; //delete api 
  	}
-	
+	 
 }
