@@ -28,10 +28,11 @@ public class ConfigController {
 		return "[Config values stored are: testvalue]"; 
 	}
   
-  @RequestMapping(value = "/find/{name}", method = RequestMethod.GET)
+  /*@RequestMapping(value = "/find/{name}", method = RequestMethod.GET)
 	public @ResponseBody String findConfig(@PathVariable String name) {
 		return "Config " + name + "found"; 
 	}
+  */
   
  @RequestMapping(value = "/delete/{name}", method = RequestMethod.DELETE)
 	public @ResponseBody String deleteConfig(@PathVariable String name) {
